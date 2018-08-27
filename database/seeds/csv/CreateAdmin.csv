@@ -1,0 +1,3 @@
+admin_name,username,password,type,status
+ESQUEJO Super Admin,superadmin,esquejosuperadmin,2,active
+Twinlincoln Admin,admin,admin12345,1,active
