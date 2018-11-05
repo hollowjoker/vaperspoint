@@ -8,6 +8,9 @@
 	src : url(../fonts/Raleway-Light.ttf);
 	src : url(../fonts/Raleway-Medium.ttf);
 }
+body{
+	background-color: #3b3b3d;
+}
 .text-600{
 	font-weight: 600;
 }
@@ -15,62 +18,74 @@ table *{
 	transition : .1s;
 }
 .content-wrapper{
-	background-color: #f7f7f7;
+	background-color: #2d3f50;
+}
+.navbar-dark,
+#mainNav.navbar-dark .navbar-collapse .navbar-sidenav{
+	background-color: #293745 !important;
+}
+.card.dark-standard{
+	background-color: #3b4c62;
+	color: #fff;
+}
+.card.dark-standard .list-group-flush li{
+	background-color: transparent;
+	border-color: #eee;
 }
 .table-heading th {
 	font-size: .8rem;
 }
 .card-body-icon .fa {
-	color: #f5a557;
+	color: #56C4AD;
 }
 .swal-overlay
 {
-	background: rgba(245,217,97,1);
-	background: -moz-linear-gradient(-45deg, rgba(245,217,97,1) 0%, rgba(254,156,136,0.45) 100%);
-	background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(245,217,97,1)), color-stop(100%, rgba(254,156,136,0.45)));
-	background: -webkit-linear-gradient(-45deg, rgba(245,217,97,1) 0%, rgba(254,156,136,0.45) 100%);
-	background: -o-linear-gradient(-45deg, rgba(245,217,97,1) 0%, rgba(254,156,136,0.45) 100%);
-	background: -ms-linear-gradient(-45deg, rgba(245,217,97,1) 0%, rgba(254,156,136,0.45) 100%);
-	background: linear-gradient(135deg, rgba(245,217,97,1) 0%, rgba(254,156,136,0.45) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5d961', endColorstr='#fe9c88', GradientType=1 );
+	background-image: linear-gradient(to right, #56c4ad, #00b4b8, #00a1c1, #008dc3, #2576bb);
 }
 .dtp div.dtp-actual-year{
 	color: #fff;
 }
 #mainNav.navbar-dark .navbar-collapse .navbar-sidenav>.nav-item>.nav-link:hover,
 {
-	background-color: #e2975d;
+	background-color: #56C4AD;
 	color: #fff;
 }
 .dtp div.dtp-date, .dtp div.dtp-time{
-	background-color: #ffc191;
+	background-color: #56C4AD;
 }
 #mainNav .navbar-collapse .navbar-nav>.nav-item.dropdown>.nav-link,
 #mainNav .navbar-brand,
 .text-default
 {
-	color: #f5a557;
+	color: #56C4AD;
 }
 #mainNav.navbar-dark .navbar-collapse .navbar-sidenav li.active a,
 .modal-header,
 .dtp > .dtp-content > .dtp-date-view > header.dtp-header,
 .dtp table.dtp-picker-days tr > td > a.selected
 {
-	background-color: #f1813a;
+	background-color: #56C4AD;
 	color: #fff;
 }
 hr{
-	border-color: #f1813a;
+	border-color: #56C4AD;
 }
 .dtp div.dtp-picker-month{
-	color: #f1813a;
+	color: #56C4AD;
 }
 .btn-mild{
-	background-color: #663ab7;
+	background-color: #8e5fe4;
 	color: #fff;
 }
 .btn-mild:hover{
-	background-color: #491f96;
+	background-color: #6e42bf;
+}
+.btn-standard{
+	background-color: #56C4AD;
+	color: #fff;
+}
+.btn-standard:hover{
+	background-color: #3b9481;
 }
 .table.dataTable{
 	border-collapse: collapse !important;
@@ -115,4 +130,18 @@ hr{
 .for-cart:hover .to-rel .custom-delete{
 	opacity: 1;
 	visibility: visible;
+}
+
+.login-card {
+	background-color: transparent;
+	color: #fff;
+}
+.login-card > img{
+	opacity: .1;
+}
+.w-30px{
+	width: 30px;
+}
+.h-250px{
+	min-height: 250px;
 }

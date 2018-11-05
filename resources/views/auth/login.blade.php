@@ -10,8 +10,8 @@
         <link rel="stylesheet" href="{!! asset('sbadmin/vendor/datatables/dataTables.bootstrap4.css')!!}" >
         <link rel="stylesheet" href="{!! asset('sbadmin/css/sb-admin.min.css') !!}">
         <link rel="stylesheet" href="{!! asset('css/style-me.css') !!}">
-        <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/twinlincoln_icon.png') }}" />
-        <title>Twinlincoln</title>
+        <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/logo-sticker.png') }}" />
+        <title>VapersPoint</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -20,9 +20,11 @@
         <div class="container-fluid my-5">
             <div class="row justify-content-center">
                 <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-body text-center">
-                            <h1 class="mt-4">TwinLincoln</h1>
+                    <div class="card login-card">
+                        <img class="card-img-top" src="{{ asset('images/logo-sticker.png') }}" alt="Card image">
+                        <div class="card-img-overlay text-center">
+                            <h1 class="mt-4">VapersPoint</h1>
+                            <h5>Mandaluyong</h5>
                             <h4 class="mb-5">Login</h4>
                             <hr>
                             <form action=" {{ route('login.post') }} " method="post" class="my-5" id="loginForm">
@@ -33,7 +35,7 @@
                                 <div class="form-group">
                                     <input type="password" class="form-control form-control-lg" name="password" placeholder="Password" required >
                                 </div>
-                                <button class="btn btn-info btn-lg btn-block" type="submit">Login</button>
+                                <button class="btn btn-standard btn-lg btn-block" type="submit">Login</button>
                             </form>
                         </div>
                     </div>

@@ -5,7 +5,7 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="card">
+				<div class="card dark-standard">
 					<div class="card-body">
 						<div class="row">
 							<div class="col-sm-8">
@@ -17,7 +17,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="card my-2">
+		<div class="card my-2 dark-standard">
 			<div class="card-body">
 				<h3>List of Transactions</h3>
 				<table class="table table-bordered table-striped" id="transactionTable">
@@ -25,9 +25,8 @@
 						<tr>
 							<td>Transaction No.</td>
 							<td>Date</td>
-							<td>Worker</td>
-							<td>Transacted By</td>
 							<td>Amount</td>
+							<td>Details</td>
 							<td>Action</td>
 						</tr>
 					</thead>
@@ -45,17 +44,17 @@
 		});
 
 		function getData() {
-			$('#transactionTable').DataTable({
-				processing : true,
-				serverSide : true,
-				responsive : true,
-				searching : true,
-				autoWidth : false,
-				order : [[ 0, "desc" ]],
-				ajax : {
-					url : '/transaction/api',
-				}
-			});
+			// $('#transactionTable').DataTable({
+			// 	processing : true,
+			// 	serverSide : true,
+			// 	responsive : true,
+			// 	searching : true,
+			// 	autoWidth : false,
+			// 	order : [[ 0, "desc" ]],
+			// 	ajax : {
+			// 		url : '/transaction/api',
+			// 	}
+			// });
 		}
 	</script>
 @stop
