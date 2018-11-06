@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddColumnCustomerTblTransaction extends Migration
+class CreateCategory extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,11 @@ class AddColumnCustomerTblTransaction extends Migration
      */
     public function up()
     {
-        Schema::table('Tbl_transactions', function (Blueprint $table) {
-            $table->integer('tbl_customer_id')->after('transaction_no');
+        Schema::create('categories', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name')->nullable();
+            $table->softDeletes();
+            $table->timestamps();
         });
     }
 
@@ -25,8 +28,6 @@ class AddColumnCustomerTblTransaction extends Migration
      */
     public function down()
     {
-        Schema::table('Tbl_transactions', function (Blueprint $table) {
-            $table->dropColumn('tbl_customer_id');
-        }); 
+        //
     }
 }

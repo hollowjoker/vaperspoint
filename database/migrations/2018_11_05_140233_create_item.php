@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTblExpensesTable extends Migration
+class CreateItem extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,11 @@ class CreateTblExpensesTable extends Migration
      */
     public function up()
     {
-        Schema::create('tbl_expenses', function (Blueprint $table) {
+        Schema::create('items', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('category_id');
+            $table->string('name')->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }
@@ -26,6 +29,6 @@ class CreateTblExpensesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tbl_expenses');
+        //
     }
 }

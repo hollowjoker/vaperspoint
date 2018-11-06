@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTblItemImportedTransactionsTable extends Migration
+class CreateTransaction extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,19 @@ class CreateTblItemImportedTransactionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('tbl_item_imported_transactions', function (Blueprint $table) {
+        Schema::create('transactions', function (Blueprint $table) {
             $table->increments('id');
-            $table->text('trans_code');
             $table->integer('item_id');
-            $table->decimal('qty',11,2);
-            $table->decimal('srp_price',11,2);
-            $table->decimal('price',11,2);
-            $table->decimal('amount',11,2);
+            $table->integer('quantity')->default(0);
+
+            $table->decimal('vip_price',5,2);
+            $table->decimal('srp_price',5,2);
+            $table->decimal('rsp_price',5,2);
+            $table->decimal('retail');
+            $table->integer('item_sell');
+            $table->integer('total_stock');
+            $table->integer('size');
+            $table->integer('nic');
             $table->softDeletes();
             $table->timestamps();
         });
@@ -33,6 +38,6 @@ class CreateTblItemImportedTransactionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tbl_item_imported_transactions');
+        //
     }
 }
