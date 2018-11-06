@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTblCategoriesTable extends Migration
+class CreateUserAdmin extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,12 @@ class CreateTblCategoriesTable extends Migration
      */
     public function up()
     {
-        Schema::create('tbl_categories', function (Blueprint $table) {
+        Schema::create('user_admins', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('category_name', 50);
-            $table->string('type', 20);
-            $table->string('status', 20)->default('active');
+            $table->enum('type',['admin','super-admin']);
+            $table->string('username');
+            $table->string('password');
+            $table->string('email')->unique();
             $table->softDeletes();
             $table->timestamps();
         });
@@ -27,9 +28,9 @@ class CreateTblCategoriesTable extends Migration
      * Reverse the migrations.
      *
      * @return void
-     */
+     */ 
     public function down()
     {
-        Schema::dropIfExists('tbl_categories');
+        Schema::dropIfExists('user_admins');
     }
 }
