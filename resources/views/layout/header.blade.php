@@ -10,46 +10,45 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
             <li class="nav-item <?= (strpos($a, 'dashboard') ? 'active' : '') ?>" data-toggle="tooltip" data-placement="right" title="Dashboard">
-                <a class="nav-link" href="{{ route('dashboard') }}">
+                <a class="nav-link" href="{-- route('dashboard') --}">
                     <i class="fa fa-fw fa-dashboard"></i>
                     <span class="nav-link-text">Dashboard</span>
                 </a>
             </li>
             <li class="nav-item <?= (strpos($a, 'transaction') ? 'active' : '') ?>" data-toggle="tooltip" data-placement="right" title="Dashboard">
-                <a class="nav-link" href="{{ route('transaction') }}">
+                <a class="nav-link" href="{-- route('transaction') --}">
                     <i class="fa fa-fw fa-dashboard"></i>
                     <span class="nav-link-text">Transaction</span>
                 </a>
             </li>
             <li class="nav-item <?= (strpos($a, 'product') ? 'active' : '') ?>" data-toggle="tooltip" data-placement="right" title="Product">
-                <!-- <a class="nav-link nav-link-collapse collapsed" href="{{ route('product') }} #collapseComponents" data-toggle="collapse" data-parent="#exampleAccordion"> -->
                 <a class="nav-link nav-link-collapse collapsed" href="#collapseComponents" data-toggle="collapse" data-parent="#exampleAccordion">
                     <i class="fa fa-fw fa-plus-square"></i>
                     <span class="nav-link-text">Product</span>
                 </a>
                 <ul class="sidenav-second-level collapse" id="collapseComponents">
                     <li>
-                        <a href="{{ route('product') }}">List Product</a>
+                        <a href="{-- route('product') --}">List Product</a>
                     </li>
                     <li>
-                        <a href="{{ route('product.create') }}">Add Product</a>
+                        <a href="{-- route('product.create') --}">Add Product</a>
                     </li>
                 </ul>
             </li>
             <li class="nav-item <?= (strpos($a, 'inventory') ? 'active' : '') ?>" data-toggle="tooltip" data-placement="right" title="Inventory">
-                <a class="nav-link" href="{{ route('inventory') }}">
+                <a class="nav-link" href="{-- route('inventory') --}">
                     <i class="fa fa-fw fa-cubes"></i>
                     <span class="nav-link-text">Inventory</span>
                 </a>
             </li>
             <li class="nav-item <?= (strpos($a, 'category') ? 'active' : '') ?>" data-toggle="tooltip" data-placement="right" title="Category">
-                <a class="nav-link" href="{{ route('category') }} ">
+                <a class="nav-link" href="{-- route('category') --} ">
                     <i class="fa fa-fw fa-plus-square"></i>
                     <span class="nav-link-text">Category</span>
                 </a>
             </li>
             <li class="nav-item <?= (strpos($a, 'expense') ? 'active' : '') ?>" data-toggle="tooltip" data-placement="right" title="Expense">
-                <a class="nav-link" href="{{ route('expense') }} ">
+                <a class="nav-link" href="{-- route('expense') --} ">
                     <!-- <i class="fa fa-fw fa-plus-square"></i> -->
                     <i class="fa fa-fw fa-money"></i>
                     <span class="nav-link-text">Expense</span>
@@ -79,7 +78,7 @@
                     {{ date('a') == 'am' ? 'Good Morning' : 'Good Evening' }} Admin!
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="alertsDropdown">
-                    <a class="dropdown-item" href=" {{ route('login.logout') }} ">Logout</a>
+                    <a class="dropdown-item" href=" {-- route('login.logout') --} ">Logout</a>
                 </div>
             </li>
         </ul>
@@ -104,7 +103,7 @@
             <div class="modal-body">
                 <div class="row">
                     <div class="col-md-12">
-                        <form action="{{ route('dashboard.attendance_save')}}" class="text-center">
+                        <form action="{-- route('dashboard.attendance_save') --}" class="text-center">
                             <h3> {{ date('F d, Y') }} </h3>
                             <h1 class="display-4 mb-5"> {{ date('H:i A') }} </h1>
                             <div class="form-group text-left">

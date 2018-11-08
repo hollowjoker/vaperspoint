@@ -50,7 +50,6 @@ class LoginController extends Controller
         $credentials = $request->only('username','password');
         // $credentials = $credentials + ['status' => 'active'];
         $credentials = array_merge($credentials, ['status' => 'active']);
-
         $data = [];
         if(Auth::guard('admin')->attempt($credentials)) {
             // return redirect()->intended('dashboard');

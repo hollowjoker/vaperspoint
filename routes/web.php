@@ -26,15 +26,15 @@ Route::group(['prefix' => '/login', 'middleware' => ['web']], function(){
     Route::get('/logout','Auth\LoginController@logout')->name('login.logout');
 });
 
-// Route::group(['prefix' => '/dashboard'], function(){
-//     Route::get('/','DashboardController@index')->name('dashboard');
-//     Route::get('/getExpense','DashboardController@getExpense')->name('dashboard.getExpense');
-//     Route::get('/getMonthlyIncome','DashboardController@getMonthlyIncome')->name('dashboard.getMonthlyIncome');
-//     Route::get('/getWeeklyIncome','DashboardController@getWeeklyIncome')->name('dashboard.getWeeklyIncome');
-//     Route::get('/getTransactions','DashboardController@getTransactions')->name('dashboard.getTransactions');
-//     Route::get('/getIncomeYearly','DashboardController@getIncomeYearly')->name('dashboard.getIncomeYearly');
-//     Route::post('/attendanceSave'.'DashboardController@attendanceSave')->name('dashboard.attendance_save');
-// });
+Route::group(['prefix' => '/dashboard'], function(){
+    Route::get('/','DashboardController@index')->name('dashboard');
+    // Route::get('/getExpense','DashboardController@getExpense')->name('dashboard.getExpense');
+    // Route::get('/getMonthlyIncome','DashboardController@getMonthlyIncome')->name('dashboard.getMonthlyIncome');
+    // Route::get('/getWeeklyIncome','DashboardController@getWeeklyIncome')->name('dashboard.getWeeklyIncome');
+    // Route::get('/getTransactions','DashboardController@getTransactions')->name('dashboard.getTransactions');
+    // Route::get('/getIncomeYearly','DashboardController@getIncomeYearly')->name('dashboard.getIncomeYearly');
+    // Route::post('/attendanceSave'.'DashboardController@attendanceSave')->name('dashboard.attendance_save');
+});
 
 // Route::group(['prefix' => '/transaction'], function(){
 //     Route::get('/{type?}','TransactionController@index')->name('transaction');

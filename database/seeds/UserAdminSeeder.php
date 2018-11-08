@@ -24,6 +24,7 @@ class UserAdminSeeder extends Seeder
         };
         fclose($file_handle);
 
+
         foreach($array as $key => $arr) {
 
             if($key != 0 && $arr != false) {
@@ -33,7 +34,8 @@ class UserAdminSeeder extends Seeder
                 $admin->username = $arr[1];
                 $admin->password = bcrypt($arr[2]);
                 $admin->email = $arr[3];
-                $admin->name = $arr[4];
+                $admin->status = $arr[4];
+                $admin->name = $arr[5];
 
                 $admin->save();
             }

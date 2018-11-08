@@ -83,112 +83,112 @@
 	<script>
 		$(function(){
 			
-			getExpense();
-			getMonthly();
-			getWeekly();
-			getTransactions();
-			getIncomeYearly();
+			// getExpense();
+			// getMonthly();
+			// getWeekly();
+			// getTransactions();
+			// getIncomeYearly();
 		});
 
-		function getExpense() {
-			$.ajax({
-				url : '/dashboard/getExpense',
-				type : 'get',
-			}).done(function(returnData){
-				var parsedData = $.parseJSON(returnData);
-				$('#expenseCount').text(parsedData['expenseSum']);
-				console.log(returnData);
-			});
-		}
+		// function getExpense() {
+		// 	$.ajax({
+		// 		url : '/dashboard/getExpense',
+		// 		type : 'get',
+		// 	}).done(function(returnData){
+		// 		var parsedData = $.parseJSON(returnData);
+		// 		$('#expenseCount').text(parsedData['expenseSum']);
+		// 		console.log(returnData);
+		// 	});
+		// }
 
-		function getMonthly() {
-			$.ajax({
-				url : '/dashboard/getMonthlyIncome',
-				type : 'get',
-			}).done(function(result){
-				var parsedData = $.parseJSON(result);
-				$('#monthlyIncome').text(parsedData['monthlyIncomeSum']);
-			});
-		}
+		// function getMonthly() {
+		// 	$.ajax({
+		// 		url : '/dashboard/getMonthlyIncome',
+		// 		type : 'get',
+		// 	}).done(function(result){
+		// 		var parsedData = $.parseJSON(result);
+		// 		$('#monthlyIncome').text(parsedData['monthlyIncomeSum']);
+		// 	});
+		// }
 
-		function getWeekly() {
-			$.ajax({
-				url : '/dashboard/getWeeklyIncome',
-				type : 'get'
-			}).done(function(result){
-				var parsedData = $.parseJSON(result);
-				$('#weeklyIncome').text(parsedData['weeklyIncomeSum']);
-			});
-		}
+		// function getWeekly() {
+		// 	$.ajax({
+		// 		url : '/dashboard/getWeeklyIncome',
+		// 		type : 'get'
+		// 	}).done(function(result){
+		// 		var parsedData = $.parseJSON(result);
+		// 		$('#weeklyIncome').text(parsedData['weeklyIncomeSum']);
+		// 	});
+		// }
 
-		function getTransactions() {
-			$.ajax({
-				url : '/dashboard/getTransactions',
-				type : 'get'
-			}).done(function(result){
-				console.log(result);
-				var parsedData = $.parseJSON(result);
-				$('#transactions').text(parsedData['transactionCount']);
-			});
-		}
+		// function getTransactions() {
+		// 	$.ajax({
+		// 		url : '/dashboard/getTransactions',
+		// 		type : 'get'
+		// 	}).done(function(result){
+		// 		console.log(result);
+		// 		var parsedData = $.parseJSON(result);
+		// 		$('#transactions').text(parsedData['transactionCount']);
+		// 	});
+		// }
 
-		function getIncomeYearly() {
-			$.ajax({
-				url : '/dashboard/getIncomeYearly',
-				type : 'get',
-			}).done(function(result){
-				var parsedData = $.parseJSON(result);
+		// function getIncomeYearly() {
+		// 	$.ajax({
+		// 		url : '/dashboard/getIncomeYearly',
+		// 		type : 'get',
+		// 	}).done(function(result){
+		// 		var parsedData = $.parseJSON(result);
 
-				console.log(parsedData);
-				var ctx = document.getElementById("myAreaChart");
-				var myLineChart = new Chart(ctx, {
-					type: 'line',
-					data: {
-						labels: parsedData['months'],
-						datasets: [{
-							label: "Sessions",
-							lineTension: 0.3,
-							backgroundColor: "#f5a55840",
-							borderColor: "#f5a558",
-							pointRadius: 5,
-							pointBackgroundColor: "#f5a558",
-							pointBorderColor: "rgba(255,255,255,0.8)",
-							pointHoverRadius: 5,
-							pointHoverBackgroundColor: "rgba(2,117,216,1)",
-							pointHitRadius: 20,
-							pointBorderWidth: 2,
-							data: parsedData['datas'],
-						}],
-					},
-					options: {
-						scales: {
-						xAxes: [{
-							time: {
-							unit: 'date'
-							},
-							gridLines: {
-							display: false
-							},
-							ticks: {
-							maxTicksLimit: 7
-							}
-						}],
-						yAxes: [{
-							ticks: {
-							min: 0,
-							maxTicksLimit: 5
-							},
-							gridLines: {
-							color: "rgba(0, 0, 0, .125)",
-							}
-						}],
-						},
-						legend: {
-						display: false
-						}
-					}
-				});
-			});
+		// 		console.log(parsedData);
+		// 		var ctx = document.getElementById("myAreaChart");
+		// 		var myLineChart = new Chart(ctx, {
+		// 			type: 'line',
+		// 			data: {
+		// 				labels: parsedData['months'],
+		// 				datasets: [{
+		// 					label: "Sessions",
+		// 					lineTension: 0.3,
+		// 					backgroundColor: "#f5a55840",
+		// 					borderColor: "#f5a558",
+		// 					pointRadius: 5,
+		// 					pointBackgroundColor: "#f5a558",
+		// 					pointBorderColor: "rgba(255,255,255,0.8)",
+		// 					pointHoverRadius: 5,
+		// 					pointHoverBackgroundColor: "rgba(2,117,216,1)",
+		// 					pointHitRadius: 20,
+		// 					pointBorderWidth: 2,
+		// 					data: parsedData['datas'],
+		// 				}],
+		// 			},
+		// 			options: {
+		// 				scales: {
+		// 				xAxes: [{
+		// 					time: {
+		// 					unit: 'date'
+		// 					},
+		// 					gridLines: {
+		// 					display: false
+		// 					},
+		// 					ticks: {
+		// 					maxTicksLimit: 7
+		// 					}
+		// 				}],
+		// 				yAxes: [{
+		// 					ticks: {
+		// 					min: 0,
+		// 					maxTicksLimit: 5
+		// 					},
+		// 					gridLines: {
+		// 					color: "rgba(0, 0, 0, .125)",
+		// 					}
+		// 				}],
+		// 				},
+		// 				legend: {
+		// 				display: false
+		// 				}
+		// 			}
+		// 		});
+		// 	});
 		}
 	</script>
 @stop
