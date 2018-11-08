@@ -16,17 +16,12 @@ class CreateTransaction extends Migration
         Schema::create('transactions', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('item_id');
+            $table->integer('customer_id');
             $table->integer('quantity')->default(0);
-
-            $table->decimal('vip_price',5,2);
-            $table->decimal('srp_price',5,2);
-            $table->decimal('rsp_price',5,2);
-            $table->decimal('retail');
-            $table->integer('item_sell');
-            $table->integer('total_stock');
-            $table->integer('size');
-            $table->integer('nic');
-            $table->softDeletes();
+            $table->decimal('price',11,2);
+            $table->decimal('amount',11,2);
+            $table->string('transaction_no');
+            $table->text('description')->nullable();
             $table->timestamps();
         });
     }
@@ -38,6 +33,6 @@ class CreateTransaction extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('transactions');
     }
 }

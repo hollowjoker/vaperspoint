@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateItem extends Migration
+class CreateCustomer extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateItem extends Migration
      */
     public function up()
     {
-        Schema::create('items', function (Blueprint $table) {
+        Schema::create('customers', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('category_id');
             $table->string('name')->nullable();
+            $table->string('loyalty_no');
             $table->softDeletes();
             $table->timestamps();
         });
@@ -29,6 +29,6 @@ class CreateItem extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('items');
+        Schema::dropIfExists('customers');
     }
 }

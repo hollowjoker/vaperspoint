@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateItem extends Migration
+class AddColumnName extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,8 @@ class CreateItem extends Migration
      */
     public function up()
     {
-        Schema::create('items', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('category_id');
+        Schema::table('user_admins', function (Blueprint $table){
             $table->string('name')->nullable();
-            $table->softDeletes();
-            $table->timestamps();
         });
     }
 
@@ -29,6 +25,8 @@ class CreateItem extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('items');
+        Schema::table('user_admins', function (Blueprint $table){
+            $table->dropColumn('name');
+        });
     }
 }
