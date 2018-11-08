@@ -46,6 +46,7 @@ class LoginController extends Controller
     }
 
     public function post(Request $request) {
+
         $credentials = $request->only('username','password');
         // $credentials = $credentials + ['status' => 'active'];
         $credentials = array_merge($credentials, ['status' => 'active']);
