@@ -15,7 +15,7 @@ class UserAdminSeeder extends Seeder
     {
         DB::statement('SET FOREIGN_KEY_CHECKS=0');
 
-        DB::table('user_admin')->truncate();
+        DB::table('user_admins')->truncate();
 
         $file_handle = fopen(__DIR__.'/csv/CreateAdmin.csv','r');
 
