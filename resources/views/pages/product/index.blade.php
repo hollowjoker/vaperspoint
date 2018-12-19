@@ -12,7 +12,7 @@
                                 <span class="text-muted">This list is showing all Category of your Items</span>
                             </div>
                             <div class="col-sm-4 text-right">
-                                <a href="{{ route('product.create') }}" class="btn btn-standard btn-lg">Add Product</a>
+                                <a href="{-- route('product.create') --}" class="btn btn-standard btn-lg">Add Product</a>
                             </div>
                         </div>
                     </div>
@@ -62,7 +62,7 @@
     <div class="modal fade" id="importModal" tabindex="-1" role="dialog">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
-				<form action="{{ route('product.update') }}" id="importForm" method="post" class="needs-validation" novalidate>
+				<form action="{-- route('product.update') --}" id="importForm" method="post" class="needs-validation" novalidate>
                     {{ csrf_field() }}
                     {{ method_field('PATCH') }}
 					<div class="modal-header">
