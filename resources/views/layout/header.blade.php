@@ -28,23 +28,23 @@
                 </a>
                 <ul class="sidenav-second-level collapse" id="collapseComponents">
                     <li>
-                        <a href="{-- route('product') --}">List Product</a>
+                        <a href="{{ route('products') }}">List Product</a>
                     </li>
-                    <li>
-                        <a href="{-- route('product.create') --}">Add Product</a>
-                    </li>
+                    <!-- <li>
+                        <a href="{{ route('products.create') }}">Add Product</a>
+                    </li> -->
                 </ul>
-            </li>
-            <li class="nav-item <?= (strpos($a, 'inventory') ? 'active' : '') ?>" data-toggle="tooltip" data-placement="right" title="Inventory">
-                <a class="nav-link" href="{-- route('inventory') --}">
-                    <i class="fa fa-fw fa-cubes"></i>
-                    <span class="nav-link-text">Inventory</span>
-                </a>
             </li>
             <li class="nav-item <?= (strpos($a, 'category') ? 'active' : '') ?>" data-toggle="tooltip" data-placement="right" title="Category">
                 <a class="nav-link" href="{-- route('category') --} ">
                     <i class="fa fa-fw fa-plus-square"></i>
                     <span class="nav-link-text">Category</span>
+                </a>
+            </li>
+            <li class="nav-item <?= (strpos($a, 'category') ? 'active' : '') ?>" data-toggle="tooltip" data-placement="right" title="Category">
+                <a class="nav-link" href="{-- route('category') --} ">
+                    <i class="fa fa-fw fa-plus-square"></i>
+                    <span class="nav-link-text">Customer</span>
                 </a>
             </li>
             <li class="nav-item <?= (strpos($a, 'expense') ? 'active' : '') ?>" data-toggle="tooltip" data-placement="right" title="Expense">

@@ -35,8 +35,16 @@ table *{
 .table-heading th {
 	font-size: .8rem;
 }
+.card-body {
+	justify-content: space-between;
+}
 .card-body-icon .fa {
 	color: #56C4AD;
+}
+.card-body-add-product {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 .swal-overlay
 {
@@ -110,22 +118,22 @@ hr{
 	display: block;
 }
 .invalid-feedback-custom{
-	display: none;
-    width: 100%;
-    margin-top: .25rem;
-    font-size: 80%;
     color: #dc3545;
+	display: none;
+    font-size: 80%;
+    margin-top: .25rem;
+    width: 100%;
 }
 .to-rel{
 	position: relative;
 }
 .custom-delete{
 	opacity: 0;
-	visibility: hidden;
 	position: absolute;
 	right: 10px;
-	top: 10px;
 	transition: .2s;
+	top: 10px;
+	visibility: hidden;
 }
 .for-cart:hover .to-rel .custom-delete{
 	opacity: 1;
@@ -144,4 +152,50 @@ hr{
 }
 .h-250px{
 	min-height: 250px;
+}
+.main-bg-color {
+	background-color: #3b4c62;
+	color: #b4e4da;
+}
+.product-listing .card{
+	border: 0px
+}
+.btn-dark-color {
+	background-color: #56C4AD;
+}
+h1,
+h3 {
+	margin-bottom: 0;
+	color: #ffffff;
+}
+.product-description ul li span {
+	border-radius: 5px;
+	font-size: 11px;
+	padding: 3px;
+	color: #ffffff;
+}
+.product-description ul li span:nth-child(1) {
+    background-color: #ff99ff;
+}
+.product-description ul li span:nth-child(2) {
+    background-color: #80aaff;
+}
+.product-description ul li span:nth-child(3) {
+    background-color: #ffbb99;
+}
+.product-description ul li span:nth-child(4) {
+    background-color: #94b8b8;
+}
+.image-juices {
+	background-position: center;
+    background-size: cover;
+	height: 300px;
+    width: 100%;
+}
+.product-description ul {
+	list-style: none;
+	padding: 0;
+}
+.product-description ul li span {
+	color: #000;
 }
