@@ -2,6 +2,8 @@
 
 use Illuminate\Http\Request;
 
+use App\Library\ClassFactory as CF;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -15,4 +17,16 @@ use Illuminate\Http\Request;
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+
+Route::group(['middleware' => ['api']], function(){
+    
+	Route::get('/test', function (Request $request) {
+        $data = CF::model('Category')
+        ->with('Item')
+        ->with('Item_detail')
+        ->get();
+        return $data;
+    });
 });

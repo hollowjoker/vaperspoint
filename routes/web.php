@@ -48,16 +48,16 @@ Route::group(['prefix' => '/dashboard'], function(){
 // });
 
 // // product
-// Route::group(['prefix' => '/product'],function(){
-//     Route::post('/store', 'ProductController@store')->name('product.store');
-//     Route::get('/create/{line?}', 'ProductController@create')->name('product.create');
+Route::group(['prefix' => '/product'],function(){
+    // Route::post('/store', 'ProductController@store')->name('product.store');
+    Route::get('/create/{line?}', 'ProductController@create')->name('product.create');
 //     Route::get('/edit/{id}', 'ProductController@edit')->name('product.edit');
-//     Route::get('/{type?}', 'ProductController@index')->name('product');
+    Route::get('/{type?}', 'ProductController@index')->name('product');
 //     Route::get('/getProduct/{id}', 'ProductController@getProduct')->name('product.getProduct');
-//     Route::patch('/update', 'ProductController@update')->name('product.update');
+    Route::patch('/update', 'ProductController@update')->name('product.update');
 //     Route::patch('/updateAll', 'ProductController@updateAll')->name('product.updateAll');
     
-// });
+});
 
 // Route::group(['prefix' => '/inventory', 'middleware' => ['web','admin'], 'guard' => 'admin'], function(){
 //     Route::get('/receipt/{code}','InventoryController@receipt')->name('inventory.receipt');
