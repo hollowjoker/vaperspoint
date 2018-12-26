@@ -20,7 +20,7 @@
             </div>
         </div>
                         
-        <div class="card-deck">
+        <div class="card-deck" data-url="{{  }}">
             <div class="card my-2 dark-standard">
                 <div class="card-header h-250px" style="background-image: url({{ asset('images/bamskilicious.jpg') }}); background-size: cover; background-repeat: no-repeat; background-position: center;">
                 </div>
@@ -37,7 +37,7 @@
                     <li class="list-group-item">120 ml <span class="badge">3</span> </li>
                 </ul>
             </div>
-            <div class="card my-2 dark-standard">
+            {{-- <div class="card my-2 dark-standard">
                 <div class="card-header h-250px" style="background-image: url({{ asset('images/bks_choice.jpg') }}); background-size: cover; background-repeat: no-repeat; background-position: center;">
                 </div>
                 <div class="card-body">
@@ -54,7 +54,7 @@
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     <a href="#" class="btn btn-primary">Go somewhere</a>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 </div>
@@ -107,6 +107,18 @@
         $('.modal').on('hide.bs.modal', function () {
 			// getData();
 		});
+
+        $(function() {
+
+        });
+
+        function getData() {
+            var that = $(this);
+            var dataUrl = $()
+            $.ajax({
+                
+            });
+        }
         // $(function(){
         //     getData();
         //     $('#importForm').unbind('submit');

@@ -172,18 +172,18 @@ h3 {
 	border-radius: 5px;
 	font-size: 11px;
 	padding: 3px;
-	color: #ffffff;
+	color: #333;
 }
-.product-description ul li span:nth-child(1) {
+.product-description ul li .low {
     background-color: #ff99ff;
 }
-.product-description ul li span:nth-child(2) {
+.product-description ul li .mid {
     background-color: #80aaff;
 }
-.product-description ul li span:nth-child(3) {
+.product-description ul li .high {
     background-color: #ffbb99;
 }
-.product-description ul li span:nth-child(4) {
+.product-description ul li .xhigh {
     background-color: #94b8b8;
 }
 .image-juices {
@@ -195,7 +195,4 @@ h3 {
 .product-description ul {
 	list-style: none;
 	padding: 0;
-}
-.product-description ul li span {
-	color: #000;
 }

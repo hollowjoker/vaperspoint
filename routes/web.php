@@ -59,11 +59,7 @@ Route::group(['prefix' => '/product'],function(){
     
 });
 
-// product
-Route::group(['prefix' => '/products'],function(){
-    Route::get('/', 'ProductsController@index')->name('products');
-    Route::get('/create', 'ProductsController@create')->name('products.create');
-});
+
 
 // Route::group(['prefix' => '/inventory', 'middleware' => ['web','admin'], 'guard' => 'admin'], function(){
 //     Route::get('/receipt/{code}','InventoryController@receipt')->name('inventory.receipt');
