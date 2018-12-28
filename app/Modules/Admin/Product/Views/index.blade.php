@@ -14,7 +14,7 @@
                         </div>
 
                         <div class="card-body-add-product">
-                            <div class="btn btn-md btn-dark-color text-white" data-toggle="modal" data-target="#addProduct">Add Product</div>
+                            <div class="btn btn-md btn-dark-color text-white openAddItemModal" >Add New Product</div>
                         </div>
                     </div>
                 </div>
@@ -24,7 +24,7 @@
     </div>
 
     <!-- Modal -->
-    <div class="modal fade" id="addProduct" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="addItemModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -46,6 +46,14 @@
         $(function(){
             getData();
             getAddForm();
+
+
+            $('.openAddItemModal').click(function(){
+                $('#addItemModal').modal({
+                    backdrop: 'static',
+                    keyboard: false
+                });
+            });
         });
 
         function getData() {
@@ -68,7 +76,6 @@
                 url : dataUrl,
                 data : '',
             }).done(function(returnData){
-                console.log(returnData);
                 that.html(returnData);
             });
         }

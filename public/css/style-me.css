@@ -8,6 +8,11 @@
 	src : url(../fonts/Raleway-Light.ttf);
 	src : url(../fonts/Raleway-Medium.ttf);
 }
+
+/* typography */
+label{
+	font-size: .875rem;
+}
 body{
 	background-color: #3b3b3d;
 }
@@ -195,4 +200,8 @@ h3 {
 .product-description ul {
 	list-style: none;
 	padding: 0;
+}
+
+textarea {
+	height: 150px;
 }

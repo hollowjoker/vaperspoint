@@ -10,6 +10,7 @@ use Auth;
 use Illuminate\Http\Request;
 use App\Models\Tbl_items;
 use Validator;
+use Intervention\Image\Facades\Image;
 
 class ProductsController extends Controller
 {
@@ -43,5 +44,20 @@ class ProductsController extends Controller
             'categories' => $category
         );
         return view($this->render('create'),$returnData);
+    }
+
+    public function createItem(Request $request) {
+        $image      = $request->file('file');
+        $fileName   = time() . '.' . $image->getClientOriginalExtension();
+
+        $img = Image::make($image->getRealPath());
+        $img->resize(120, 120, function ($constraint) {
+            $constraint->aspectRatio();                 
+        });
+
+        $img->stream(); // <-- Key point
+
+        //dd();
+        Storage::disk('local')->put('images/1/smalls'.'/'.$fileName, $img, 'public');
     }
 }

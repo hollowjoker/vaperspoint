@@ -3,12 +3,13 @@
 		<div class="col-md-4 my-3">
 			<div class="card">
 				<div class="image-juices" style="background-image: url('images/mango_factory.jpg')" alt="Juices"></div>
-			
 				<div class="card-body main-bg-color">
-					<div class="d-flex mb-4">
+					<div class="d-flex justify-content-between mb-4">
 						<h3 class="flex-grow-1">{{ $v['name'] }}</h3>
-
-						<button class="btn btn-sm btn-dark-color">
+						<button class="btn btn-sm btn-dark-color text-white mr-1" title="restock">
+							<i class="fa fa-cube"></i>
+						</button>
+						<button class="btn btn-sm btn-dark-color text-white" title="edit">
 							<i class="fa fa-edit"></i>
 						</button>
 					</div>

@@ -21,6 +21,7 @@
     },
     "dependencies": {
         "ajv": "^6.6.2",
+        "cropit": "^0.5.1",
         "cropperjs": "^1.4.3"
     }
 }
